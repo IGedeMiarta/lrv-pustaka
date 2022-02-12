@@ -149,4 +149,15 @@ class LaporanController extends Controller
 
         return view('laporan.donasicetak',$data);
     }
+    public function buku()
+    {
+        $data['title'] = 'Laporan Data Buku';
+        $data['book'] = Buku::all();
+        return view('laporan.buku',$data);
+    }
+    public function bukucetak(){
+        $data['book'] = Buku::all();
+        $data['title']='LAPORAN BUKU';
+        return view('laporan.bukucetak',$data);
+    }
 }

@@ -8,7 +8,6 @@
                 <a href="{{ url('dashboard') }}"><i class="ti-dashboard"></i><span>Dashboard</span></a>
             </li>
             @if (auth()->user()->role == 'Admin')
-
                 <li>
                     <a href="javascript: void(0);"><i class="ti-user"></i><span>Management User</span><span
                             class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
@@ -24,6 +23,9 @@
                     <a href="javascript: void(0);"><i class="dripicons-user-group"></i><span>Laporan</span><span
                             class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                     <ul class="nav-second-level" aria-expanded="false">
+                        <li class="nav-item"><a href="{{ url('laporan-buku') }}"><i
+                                    class="ti-control-record"></i>Laporan Buku</a>
+                        </li>
                         <li class="nav-item"><a href="{{ url('laporan-peminjaman') }}"><i
                                     class="ti-control-record"></i>Laporan Peminjaman</a>
                         </li>
@@ -37,10 +39,8 @@
                                     class="ti-control-record"></i>Laporan Donasi</a></li>
                     </ul>
                 </li>
-
             @endif
             @if (auth()->user()->role == 'Petugas')
-
                 <li>
                     <a href="javascript: void(0);"><i class="ti-book"></i><span>Management Buku</span><span
                             class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
@@ -89,7 +89,6 @@
             @endif
 
             @if (auth()->user()->role == 'Anggota')
-
                 <li>
                     <a href="javascript: void(0);"><i class="ti-book"></i><span>Data Buku</span><span
                             class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
@@ -119,7 +118,6 @@
 
                     </ul>
                 </li>
-
             @endif
         </ul>
     </div>

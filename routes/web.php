@@ -75,6 +75,8 @@ Route::group(['middleware' => ['auth']], function (){
     Route::get('cetak-pengembalian',[LaporanController::class,'cetakpengembalian']);
     Route::get('laporan-donasi',[LaporanController::class,'donasi'])->name('laporan.donasi');
     Route::get('cetak-donasi',[LaporanController::class,'cetakdonasi']);
+    Route::get('laporan-buku',[LaporanController::class,'buku'])->name('laporan.buku');
+    Route::get('laporan-buku-cetak',[LaporanController::class,'bukucetak'])->name('buku.cetak');
 
     Route::get('peminjaman-aktif',[PeminjamanAnggota::class,'peminjaman']);
     Route::get('peminjaman-history',[PeminjamanAnggota::class,'history']);
